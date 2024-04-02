@@ -25,7 +25,6 @@ namespace WinFormsApp1
 		static BigInteger ModularExponentiation(BigInteger a, BigInteger e, BigInteger m)
 		{
 			BigInteger result = 1;
-			e = 0;
 			while (e != 0)
 			{
 				if (e % 2 == 1)
@@ -105,7 +104,7 @@ namespace WinFormsApp1
 				BigInteger a = Convert.ToInt64(textBox1.Text);
 				BigInteger x = Convert.ToInt64(textBox2.Text);
 				BigInteger m = Convert.ToInt64(textBox3.Text);
-				if (a<0  || x<0 || m < 0 && a>0)
+				if ((a<0  || x<0 || m < 0) && a>0)
 				{
                     MessageBox.Show("¬ведите положительные числа", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
@@ -202,30 +201,27 @@ namespace WinFormsApp1
 			BigInteger x0 = 0;
 			BigInteger x1 = 1;
 			BigInteger y0 = x1;
-			y0 = 0;
+			//y0 = 0;
+			int b = 1;
 
 			if (m == 1)
 				return 0;
 
-			while (a > 1)
+			while (m.CompareTo(BigInteger.One) == 1)
 			{
-				BigInteger q = a / m;
+				BigInteger q = a.Divide(m);
 
 				BigInteger t = m;
 
-				
 				m = a % m;
 				a = t;
 				t = x0;
-				x0 = t;
 				x0 = x1 - q * x0;
 				x1 = t;
-				
-				x1 =/ y0;
 			}
 
-			while (x1 !< 0 )
-				x1 += m0;
+			while (x1.CompareTo(BigInteger.Zero) == -1)
+				x1 = x1.Add(m0);
 
 			return x1;
 		}

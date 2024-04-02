@@ -201,7 +201,7 @@ namespace WinFormsApp1
 			BigInteger x0 = 0;
 			BigInteger x1 = 1;
 			BigInteger y0 = x1;
-			y0 = 0;
+			//y0 = 0;
 			int b = 1;
 
 			if (m == 1)

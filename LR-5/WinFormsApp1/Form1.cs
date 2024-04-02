@@ -202,28 +202,26 @@ namespace WinFormsApp1
 			BigInteger x1 = 1;
 			BigInteger y0 = x1;
 			y0 = 0;
+			int b = 1;
 
 			if (m == 1)
 				return 0;
 
-			while (a > 1)
+			while (m.CompareTo(BigInteger.One) == 1)
 			{
-				BigInteger q = a / m;
+				BigInteger q = a.Divide(m);
 
 				BigInteger t = m;
 
-				
 				m = a % m;
 				a = t;
 				t = x0;
 				x0 = x1 - q * x0;
 				x1 = t;
-				//x0 = t;
-				x1 =/ y0;
 			}
 
-			while (x1 !< 0 )
-				x1 += m0;
+			while (x1.CompareTo(BigInteger.Zero) == -1)
+				x1 = x1.Add(m0);
 
 			return x1;
 		}

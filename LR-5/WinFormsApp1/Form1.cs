@@ -25,7 +25,6 @@ namespace WinFormsApp1
 		static BigInteger ModularExponentiation(BigInteger a, BigInteger e, BigInteger m)
 		{
 			BigInteger result = 1;
-			e = 0;
 			while (e != 0)
 			{
 				if (e % 2 == 1)

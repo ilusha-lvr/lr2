@@ -104,7 +104,7 @@ namespace WinFormsApp1
 				BigInteger a = Convert.ToInt64(textBox1.Text);
 				BigInteger x = Convert.ToInt64(textBox2.Text);
 				BigInteger m = Convert.ToInt64(textBox3.Text);
-				if (a<0  || x<0 || m < 0 && a>0)
+				if ((a<0  || x<0 || m < 0) && a>0)
 				{
                     MessageBox.Show("¬ведите положительные числа", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;

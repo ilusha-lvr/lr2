@@ -216,10 +216,9 @@ namespace WinFormsApp1
 				m = a % m;
 				a = t;
 				t = x0;
-				x0 = t;
 				x0 = x1 - q * x0;
 				x1 = t;
-				
+				//x0 = t;
 				x1 =/ y0;
 			}
 
